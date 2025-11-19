@@ -9,170 +9,159 @@
         href="https://www.yorku.ca/wp-content/themes/york-bootstrap/assets/favicons/favicon-32x32.png">
 
   <style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    margin: 40px;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      margin: 0;
+    }
 
-  h2 {
-    font-size: 22px;
-    margin-bottom: 5px;
-  }
+    /* main content area similar to SIS width */
+    .content {
+      width: 960px;
+      margin: 30px auto 60px auto;
+    }
 
-  p {
-    margin-top: -5px;
-    margin-bottom: 20px;
-    color: #444;
-    font-size: 14px;
-  }
+    h2 {
+      font-size: 18px;
+      margin: 25px 0 5px 0;
+    }
 
-  /* FIX: reduce width and center the table */
-  table {
-  width: 720px;        /* perfect York SIS width */
-  margin: 0 auto;      /* center the table */
-  border-collapse: collapse;
-  font-size: 14px;
-}
+    p.note {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #000;
+      font-size: 12px;
+    }
 
+    /* COURSE TABLE (York-style) */
+    table.course-list {
+      width: 720px;          /* close to SIS width */
+      margin: 0 auto;        /* center under heading */
+      border-collapse: collapse;
+      font-size: 12px;
+    }
 
-  th, td {
-    border: 1px solid #000;
-    padding: 10px;
-    text-align: left;
-  }
+    table.course-list th,
+    table.course-list td {
+      border: 1px solid #000;
+      padding: 6px 8px;
+      text-align: left;
+      vertical-align: middle;
+    }
 
-  th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-  }
-</style>
+    table.course-list th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
 
+    /* make first columns closer to SIS proportions */
+    table.course-list th:nth-child(1),
+    table.course-list td:nth-child(1) { width: 70px; }
+
+    table.course-list th:nth-child(2),
+    table.course-list td:nth-child(2) { width: 170px; }
+
+    table.course-list th:nth-child(3),
+    table.course-list td:nth-child(3) { width: 80px; }
+
+    /* BACK BUTTON */
+    .btn-row {
+      width: 720px;
+      margin: 18px auto 0 auto;
+      text-align: center;
+    }
+
+    .back-btn {
+      padding: 4px 16px;
+      font-size: 12px;
+      border: 1px solid #000;
+      background-color: #e0e0e0;
+      cursor: default;
+    }
+  </style>
 </head>
 <body>
+  <div class="content">
 
-  <h2>Your List of Courses</h2>
-  <p>Please note that failed courses will not be applied to degree requirements.</p>
+    <h2>Your List of Courses</h2>
+    <p class="note">
+      Please note that failed courses will not be applied to degree requirements.
+    </p>
 
-  <table>
-    <tr>
-      <th>Session</th>
-      <th>Course</th>
-      <th>Grade</th>
-      <th>types</th>
-      <th>Course Title</th>
-    </tr>
+    <table class="course-list">
+      <tr>
+        <th>Session</th>
+        <th>Course</th>
+        <th>Grade</th>
+        <th></th>
+        <th>Course Title</th>
+      </tr>
 
-    <!-- FW2024 -->
-    <tr>
-      <td>FW2024</td>
-      <td>AP/ESL 1000 6.00</td>
-      <td>B+</td>
-      <td>General Education</td>
-      <td>Canadian Language and Culture</td>
-    </tr>
+      <!-- FW2024 -->
+      <tr>
+        <td>FW2024</td>
+        <td>AP/ESL 1000 6.00</td>
+        <td>83 (A)</td>
+        <td>General Education</td>
+        <td>Canadian Language and Culture</td>
+      </tr>
 
-    <tr>
-      <td>FW2024</td>
-      <td>HH/PSYC 1010 6.00</td>
-      <td>B</td>
-      <td>Courses outside major</td>
-      <td>Introduction to Psychology</td>
-    </tr>
+      <tr>
+        <td>FW2024</td>
+        <td>HH/PSYC 1010 6.00</td>
+        <td>78 (B+)</td>
+        <td>Courses outside major</td>
+        <td>Introduction to Psychology</td>
+      </tr>
 
-    <tr>
-      <td>FW2024</td>
-      <td>SC/BIOL 1500 3.00</td>
-      <td>A+</td>
-      <td>Not Used for Major</td>
-      <td>Introduction to Biology</td>
-    </tr>
+      <tr>
+        <td>FW2024</td>
+        <td>SC/BIOL 1500 3.00</td>
+        <td>95 (A+)</td>
+        <td>Not Used for Major</td>
+        <td>Introduction to Biology</td>
+      </tr>
 
-    <!-- FW2025 -->
-    <tr>
-      <td>FW2025</td>
-      <td>AP/ECON 1010 3.00</td>
-      <td></td>
-      <td>General Education</td>
-      <td>Introduction to Macroeconomics</td>
-    </tr>
+      <!-- FW2025 -->
+      <tr>
+        <td>FW2025</td>
+        <td>AP/ECON 1010 3.00</td>
+        <td></td>
+        <td>General Education</td>
+        <td>Introduction to Macroeconomics</td>
+      </tr>
 
-    <tr>
-      <td>FW2025</td>
-      <td>AP/ECON 1000 3.00</td>
-      <td>81 (A)</td>
-      <td>General Education</td>
-      <td>Introduction to Microeconomics</td>
-    </tr>
+      <tr>
+        <td>FW2025</td>
+        <td>AP/ECON 1000 3.00</td>
+        <td>81 (A)</td>
+        <td>General Education</td>
+        <td>Introduction to Microeconomics</td>
+      </tr>
 
-    <tr>
-      <td>FW2025</td>
-      <td>LE/EECS 1520 3.00</td>
-      <td>84 (A)</td>
-      <td>Courses outside major</td>
-      <td>Computer Use: Fundamentals</td>
-    </tr>
+      <tr>
+        <td>FW2025</td>
+        <td>LE/EECS 1520 3.00</td>
+        <td>84 (A)</td>
+        <td>Courses outside major</td>
+        <td>Computer Use: Fundamentals</td>
+      </tr>
 
-    <tr>
-      <td>FW2025</td>
-      <td>SC/BIOL 1000 3.00</td>
-      <td>78 (B+)</td>
-      <td>Major</td>
-      <td>Biology I</td>
-    </tr>
+      <tr>
+        <td>FW2025</td>
+        <td>SC/BIOL 1000 3.00</td>
+        <td>78 (B+)</td>
+        <td>Major</td>
+        <td>Biology I</td>
+      </tr>
 
-    <tr>
-      <td>FW2025</td>
-      <td>SC/BIOL 1001 3.00</td>
-      <td></td>
-      <td>Major</td>
-      <td>Biology II</td>
-    </tr>
+      <tr>
+        <td>FW2025</td>
+        <td>SC/BIOL 1001 3.00</td>
+        <td></td>
+        <td>Major</td>
+        <td>Biology II</td>
+      </tr>
 
-    <tr>
-      <td>FW2025</td>
-      <td>SC/CHEM 1001 3.00</td>
-      <td></td>
-      <td>Courses outside major</td>
-      <td>Chemical Dynamics</td>
-    </tr>
-
-    <tr>
-      <td>FW2025</td>
-      <td>SC/CHEM 1000 3.00</td>
-      <td>83 (A)</td>
-      <td>Courses outside major</td>
-      <td>Chemical Structure</td>
-    </tr>
-
-    <tr>
-      <td>FW2025</td>
-      <td>SC/MATH 1507 3.00</td>
-      <td></td>
-      <td>Courses outside major</td>
-      <td>Math II for Biological/Health Sciences</td>
-    </tr>
-
-    <tr>
-      <td>FW2025</td>
-      <td>SC/MATH 1506 3.00</td>
-      <td>76 (B+)</td>
-      <td>Courses outside major</td>
-      <td>Math I for Biological/Health Sciences</td>
-    </tr>
-
-    <tr>
-      <td>FW2025</td>
-      <td>SC/STS 1411 3.00</td>
-      <td></td>
-      <td>Courses outside major</td>
-      <td>Intro. to Science, Tech. and Society</td>
-    </tr>
-
-  </table>
-
-</body>
-</html>
-
-
-
+      <tr>
+        <td>FW
